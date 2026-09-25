@@ -1,0 +1,1114 @@
+/* Blue heading gradient for Obsidian (H1 → H6). */
+
+body {
+  --h1-size: 1.75rem;
+  --h2-size: 1.50rem;
+  --h3-size: 1.30rem;
+  --h4-size: 1.15rem;
+  --h5-size: 1.05rem;
+  --h6-size: 1.00rem;
+}
+
+body.theme-light {
+  --base-surface: #fbfdff;
+  --base-surface-alt: #f0f7fd;
+  --base-toolbar-background: #f5faff;
+  --base-header-background: #dceeff;
+  --base-border-color: #9fc3e2;
+  --base-row-hover: #e9f4fc;
+  --base-active-cell: #deeffd;
+  --base-link-color: #1769aa;
+  --base-link-hover: #0b4f8a;
+  --note-link-color: #226ca8;
+  --note-link-hover: #0b4f8a;
+  --note-link-unresolved: #6385a1;
+  --note-link-hover-background: rgba(34, 108, 168, 0.08);
+  --base-muted-color: #587792;
+  --base-shadow: rgba(23, 76, 122, 0.12);
+  --quote-background-start: #e5f2fc;
+  --quote-border-color: #347dbb;
+  --quote-bar-highlight: #63a9e8;
+  --quote-shadow: rgba(23, 76, 122, 0.09);
+  --code-inline-background: #eaf4fc;
+  --code-block-background: #f6fafe;
+  --code-border-color: #a9cbe7;
+  --code-text-color: #174c77;
+  --code-accent-color: #2f78b7;
+  --code-muted-color: #6486a2;
+  --code-shadow: rgba(23, 76, 122, 0.10);
+  --list-marker-color: #1c5c99;
+  --task-checkbox-border: #2d6da8;
+  --task-checkbox-fill: #337fbe;
+  --table-border-color: #9fc3e2;
+  --table-background: #fbfdff;
+  --table-header-background: #dceeff;
+  --table-header-text: #0b4f8a;
+  --table-row-alt: #f0f7fd;
+  --table-row-hover: #eff8fe;
+  --table-shadow: rgba(23, 76, 122, 0.12);
+  --properties-surface: #fbfdff;
+  --properties-surface-alt: #f0f7fd;
+  --properties-header-background: #dceeff;
+  --properties-border-color: #a9cbe7;
+  --properties-row-hover: #e9f4fc;
+  --properties-key-color: #587792;
+  --properties-value-color: #174c77;
+  --properties-accent: #347dbb;
+  --properties-shadow: rgba(23, 76, 122, 0.10);
+  --h1-color: #0a2e5d;
+  --h2-color: #0b3d78;
+  --h3-color: #0c4d92;
+  --h4-color: #0d5ead;
+  --h5-color: #126cc1;
+  --h6-color: #1f73c9;
+}
+
+body.theme-dark {
+  --base-surface: #171d23;
+  --base-surface-alt: #18242e;
+  --base-toolbar-background: #151e26;
+  --base-header-background: #1d354a;
+  --base-border-color: #315a7c;
+  --base-row-hover: #192936;
+  --base-active-cell: #203b50;
+  --base-link-color: #82bfff;
+  --base-link-hover: #b1d9ff;
+  --note-link-color: #78b6ea;
+  --note-link-hover: #acd7fb;
+  --note-link-unresolved: #6f8da7;
+  --note-link-hover-background: rgba(120, 182, 234, 0.10);
+  --base-muted-color: #8199ad;
+  --base-shadow: rgba(0, 0, 0, 0.28);
+  --quote-background-start: #192a38;
+  --quote-border-color: #3f83bd;
+  --quote-bar-highlight: #70b5f0;
+  --quote-shadow: rgba(0, 0, 0, 0.18);
+  --code-inline-background: #202d38;
+  --code-block-background: #151e26;
+  --code-border-color: #315a7c;
+  --code-text-color: #c7e2f8;
+  --code-accent-color: #63a9e8;
+  --code-muted-color: #7891a6;
+  --code-shadow: rgba(0, 0, 0, 0.24);
+  --list-marker-color: #3f7fb8;
+  --task-checkbox-border: #4b87bd;
+  --task-checkbox-fill: #4d91d2;
+  --table-border-color: #315a7c;
+  --table-background: #171d23;
+  --table-header-background: #1d354a;
+  --table-header-text: #95c9ff;
+  --table-row-alt: #18242e;
+  --table-row-hover: #192936;
+  --table-shadow: rgba(0, 0, 0, 0.28);
+  --properties-surface: #171d23;
+  --properties-surface-alt: #18242e;
+  --properties-header-background: #1d354a;
+  --properties-border-color: #315a7c;
+  --properties-row-hover: #192936;
+  --properties-key-color: #8199ad;
+  --properties-value-color: #c7e2f8;
+  --properties-accent: #63a9e8;
+  --properties-shadow: rgba(0, 0, 0, 0.24);
+  --h1-color: #6fb5ff;
+  --h2-color: #82bfff;
+  --h3-color: #95c9ff;
+  --h4-color: #a8d3ff;
+  --h5-color: #bbdeff;
+  --h6-color: #cee8ff;
+}
+
+/* Note links — the same calm blue family in reading and editing modes. */
+body.theme-light,
+body.theme-dark {
+  --link-color: var(--note-link-color);
+  --link-color-hover: var(--note-link-hover);
+  --link-unresolved-color: var(--note-link-unresolved);
+  --link-unresolved-opacity: 0.82;
+  --link-decoration: underline;
+  --link-decoration-hover: underline;
+  --link-external-color: var(--note-link-color);
+  --link-external-color-hover: var(--note-link-hover);
+}
+
+:is(.markdown-rendered, .markdown-preview-view) :is(a.internal-link, a.external-link),
+.markdown-source-view.mod-cm6 :is(.cm-hmd-internal-link, .cm-hmd-external-link, .cm-link, .cm-url) {
+  color: var(--note-link-color) !important;
+  text-decoration-color: color-mix(in srgb, var(--note-link-color) 48%, transparent) !important;
+  text-decoration-thickness: 0.075em;
+  text-underline-offset: 0.14em;
+  transition: color 140ms ease, background-color 140ms ease, text-decoration-color 140ms ease;
+}
+
+:is(.markdown-rendered, .markdown-preview-view) :is(a.internal-link, a.external-link):hover,
+.markdown-source-view.mod-cm6 :is(.cm-hmd-internal-link, .cm-hmd-external-link, .cm-link, .cm-url):hover {
+  color: var(--note-link-hover) !important;
+  text-decoration-color: color-mix(in srgb, var(--note-link-hover) 68%, transparent) !important;
+  background-color: var(--note-link-hover-background);
+  border-radius: 0.18em;
+}
+
+:is(.markdown-rendered, .markdown-preview-view) a.internal-link.is-unresolved,
+.markdown-source-view.mod-cm6 :is(.cm-hmd-internal-link, .cm-link).is-unresolved {
+  color: var(--note-link-unresolved) !important;
+  text-decoration-style: dotted;
+  text-decoration-color: color-mix(in srgb, var(--note-link-unresolved) 58%, transparent) !important;
+  opacity: 0.88;
+}
+
+.markdown-source-view.mod-cm6 .cm-formatting-link {
+  color: color-mix(in srgb, var(--note-link-color) 58%, var(--text-faint)) !important;
+}
+
+/* Inline Properties — the same calm blue card in Reading and Live Preview. */
+.metadata-container {
+  --metadata-input-height: 1.45em;
+  --metadata-gap: 0;
+  --metadata-property-padding: 0;
+  --metadata-property-radius: 0.36em;
+  --metadata-label-font-size: 0.8em;
+  --metadata-input-font-size: 0.84em;
+  --metadata-input-padding: 0.12em 0.3em;
+  --metadata-label-width: min(8.5em, 32%);
+  margin-block: 0.58em 0.9em;
+  padding: 0.38em 0.42em;
+  border: 1px solid color-mix(in srgb, var(--properties-border-color) 72%, transparent);
+  border-radius: 0.54em;
+  color: var(--text-normal);
+  background: var(--properties-surface);
+  box-shadow: 0 0.12em 0.42em color-mix(in srgb, var(--properties-shadow) 72%, transparent);
+  overflow: hidden;
+}
+
+.metadata-container .metadata-properties-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.26em;
+  min-height: 1.5em;
+  margin: 0 0 0.2em;
+  padding: 0.1em 0.3em 0.2em;
+  border-radius: 0.34em;
+  cursor: pointer;
+}
+
+.metadata-container .metadata-properties-heading:hover {
+  background: color-mix(in srgb, var(--properties-row-hover) 66%, transparent);
+}
+
+.metadata-container .metadata-properties-title {
+  color: var(--h3-color);
+  font-size: 0.82em;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+/* Keep Obsidian's native folding control visible and compact. */
+.metadata-container .metadata-properties-heading .collapse-indicator {
+  position: static !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15em;
+  height: 1.15em;
+  padding: 0 !important;
+  border-radius: 0.28em;
+  color: var(--properties-accent);
+  opacity: 0.72 !important;
+  transition: color 140ms ease, background-color 140ms ease, opacity 140ms ease;
+}
+
+.metadata-container .metadata-properties-heading .collapse-indicator:hover {
+  color: var(--note-link-hover);
+  background: var(--properties-row-hover);
+  opacity: 1 !important;
+}
+
+.metadata-container .metadata-properties-heading .collapse-indicator svg {
+  width: 0.72em;
+  height: 0.72em;
+}
+
+.metadata-container .metadata-properties {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.metadata-container .metadata-property {
+  min-height: 1.48em;
+  margin: 0;
+  padding: 0.01em 0.08em;
+  border: 1px solid transparent;
+  border-radius: 0.36em;
+  background: transparent;
+  transition: border-color 140ms ease, background-color 140ms ease;
+}
+
+.metadata-container .metadata-property:hover,
+.metadata-container .metadata-property:focus-within {
+  border-color: color-mix(in srgb, var(--properties-border-color) 68%, transparent);
+  background: var(--properties-row-hover);
+}
+
+.metadata-container :is(.metadata-property-key, .metadata-property-key-input) {
+  color: var(--properties-key-color) !important;
+  font-weight: 550;
+}
+
+.metadata-container :is(.metadata-property-icon, .metadata-property-key-icon, .metadata-property-value-icon) {
+  color: var(--properties-accent) !important;
+  opacity: 0.72;
+}
+
+.metadata-container .metadata-property-icon {
+  padding-block: 0.08em;
+}
+
+.metadata-container .metadata-property-value {
+  min-height: 1.42em;
+  border-radius: 0.32em;
+  color: var(--properties-value-color);
+}
+
+.metadata-container .metadata-property-value :is(input, textarea, select),
+.metadata-container :is(.metadata-input-text, .metadata-input-longtext) {
+  color: var(--properties-value-color) !important;
+  border: 1px solid transparent !important;
+  border-radius: 0.32em !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.metadata-container .metadata-property-value :is(input, textarea, select):focus,
+.metadata-container :is(.metadata-input-text, .metadata-input-longtext):focus-within {
+  border-color: var(--properties-accent) !important;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--properties-accent) 16%, transparent) !important;
+}
+
+.metadata-container :is(a, a.internal-link, .metadata-link) {
+  color: var(--note-link-color) !important;
+  text-decoration-color: color-mix(in srgb, var(--note-link-color) 48%, transparent) !important;
+  text-underline-offset: 0.14em;
+}
+
+.metadata-container :is(a, a.internal-link, .metadata-link):hover {
+  color: var(--note-link-hover) !important;
+  background: var(--note-link-hover-background);
+}
+
+.metadata-container :is(.multi-select-pill, .metadata-property-value .multi-select-pill) {
+  color: var(--properties-value-color);
+  border: 1px solid color-mix(in srgb, var(--properties-border-color) 80%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--properties-header-background) 58%, transparent);
+}
+
+.metadata-container .metadata-add-button {
+  width: fit-content;
+  min-height: auto;
+  margin-block-start: 0.1em;
+  padding: 0.14em 0.34em;
+  border: 0 !important;
+  border-radius: 0.3em;
+  color: var(--properties-key-color);
+  font-family: var(--font-interface);
+  font-size: 0.76em;
+  font-weight: 500;
+  line-height: 1.25;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 0.72;
+  transition: color 140ms ease, background-color 140ms ease, opacity 140ms ease;
+}
+
+.metadata-container .metadata-add-button:hover {
+  color: var(--note-link-hover);
+  background: color-mix(in srgb, var(--properties-row-hover) 72%, transparent) !important;
+  opacity: 1;
+}
+
+/* When folded, leave a compact horizontal bar with its title and arrow. */
+.metadata-container.is-collapsed {
+  box-sizing: border-box;
+  width: 12rem;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0.26em 0.38em;
+  border-radius: 0.46em;
+  box-shadow: none;
+}
+
+.metadata-container.is-collapsed .metadata-properties-heading {
+  display: inline-flex !important;
+  margin: 0;
+  padding-block: 0.08em;
+}
+
+.metadata-container.is-collapsed .metadata-properties-title {
+  display: inline-block !important;
+  white-space: nowrap;
+}
+
+.metadata-container.is-collapsed :is(.metadata-properties, .metadata-add-button, .metadata-show-source-button) {
+  display: none !important;
+}
+
+/* Obsidian Bases — a complete blue surface shared by table, cards, and list views. */
+:is(.bases-embed, .block-language-base, .workspace-leaf-content[data-type="bases"]) {
+  --bases-header-border-width: 0 0 1px 0;
+  --bases-header-height: 2.75em;
+  --bases-embed-border-width: 0;
+  --bases-embed-border-color: var(--base-border-color);
+  --bases-embed-border-radius: 0.68em;
+  --bases-table-group-background: var(--base-surface);
+  --bases-table-header-background: var(--base-header-background);
+  --bases-table-header-background-hover: color-mix(
+    in srgb,
+    var(--base-header-background) 84%,
+    var(--base-link-color)
+  );
+  --bases-table-header-color: var(--h3-color);
+  --bases-table-header-weight: 700;
+  --bases-table-summary-background: var(--base-toolbar-background);
+  --bases-table-summary-background-hover: var(--base-row-hover);
+  --bases-table-border-color: var(--base-border-color);
+  --bases-table-row-background-hover: var(--base-row-hover);
+  --bases-table-cell-radius-active: 0.36em;
+  --bases-table-cell-radius-focus: 0.36em;
+  --bases-table-cell-shadow-active: 0 0 0 1px var(--base-link-color);
+  --bases-table-cell-shadow-focus: 0 0 0 2px var(--base-link-color);
+  --bases-table-cell-background-active: var(--base-active-cell);
+  --bases-table-cell-background-disabled: var(--base-surface-alt);
+  --bases-table-cell-background-selected: color-mix(
+    in srgb,
+    var(--base-link-color) 18%,
+    transparent
+  );
+  --bases-cards-background: var(--base-surface-alt);
+  --bases-cards-container-background: transparent;
+  --bases-cards-cover-background: var(--base-header-background);
+  --bases-cards-radius: 0.62em;
+  --bases-cards-shadow: 0 0 0 1px var(--base-border-color),
+    0 0.2em 0.65em var(--base-shadow);
+  --bases-cards-shadow-hover: 0 0 0 1px var(--base-link-color),
+    0 0.34em 0.9em var(--base-shadow);
+  --link-color: var(--base-link-color);
+  --link-color-hover: var(--base-link-hover);
+  --link-unresolved-color: var(--base-link-color);
+  --link-unresolved-opacity: 1;
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  color: var(--text-normal);
+}
+
+/* Give embedded Bases one softly rounded outer frame. */
+:is(.bases-embed, .block-language-base) {
+  border: 1px solid var(--base-border-color);
+  border-radius: 0.68em;
+  background: var(--base-surface);
+  box-shadow: 0 0.24em 0.8em var(--base-shadow);
+  overflow: hidden;
+}
+
+:is(.bases-embed, .block-language-base) .bases-view {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.workspace-leaf-content[data-type="bases"] .view-content,
+.workspace-leaf-content[data-type="bases"] .bases-view,
+.bases-view {
+  background-color: var(--base-surface);
+}
+
+/* Header and toolbar. */
+.bases-header {
+  padding-inline: 0.5em;
+  padding-block: 0.22em;
+  border-color: var(--base-border-color);
+  background: linear-gradient(
+    135deg,
+    var(--base-toolbar-background),
+    color-mix(in srgb, var(--base-toolbar-background) 82%, var(--base-header-background))
+  );
+}
+
+.bases-toolbar {
+  gap: 0.28em;
+}
+
+.bases-toolbar .bases-toolbar-item {
+  margin: 0 !important;
+}
+
+.bases-toolbar .text-icon-button {
+  margin: 0 !important;
+}
+
+.bases-toolbar .text-icon-button {
+  min-height: 1.85em;
+  padding: 0.24em 0.46em;
+  border: 1px solid transparent;
+  border-radius: 0.42em;
+  color: var(--base-muted-color);
+  background: transparent;
+  transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease;
+}
+
+.bases-toolbar .text-icon-button:hover,
+.bases-toolbar .text-icon-button.is-active {
+  color: var(--base-link-hover) !important;
+  border-color: color-mix(in srgb, var(--base-border-color) 72%, transparent);
+  background: color-mix(in srgb, var(--base-header-background) 56%, transparent);
+}
+
+.bases-toolbar .bases-toolbar-item.bases-toolbar-views-menu .text-icon-button {
+  color: var(--h3-color);
+  font-weight: 650;
+}
+
+.bases-toolbar .bases-toolbar-result-count {
+  margin-inline-start: 0.18em;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: var(--base-muted-color);
+  background: transparent;
+}
+
+.bases-toolbar .bases-toolbar-result-count .text-icon-button {
+  min-height: 1.55em;
+  padding: 0.08em 0.55em;
+  border: 0 !important;
+  border-radius: 999px;
+  color: var(--base-muted-color) !important;
+  background: color-mix(in srgb, var(--base-header-background) 32%, transparent);
+}
+
+.bases-toolbar .bases-toolbar-result-count .text-icon-button:hover {
+  color: var(--base-link-hover) !important;
+  background: color-mix(in srgb, var(--base-header-background) 52%, transparent);
+}
+
+.bases-toolbar .bases-toolbar-result-count .text-button-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38em;
+}
+
+.bases-toolbar .bases-toolbar-result-count .text-button-label::before {
+  content: "";
+  width: 0.34em;
+  height: 0.34em;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: var(--base-link-color);
+  opacity: 0.72;
+}
+
+.bases-toolbar :is(svg, .text-button-icon),
+.bases-table-header-icon,
+.bases-table-header-sort {
+  color: var(--base-link-color);
+}
+
+/* Search row and menu surfaces. */
+.bases-search-row {
+  padding: 0.42em 0.6em;
+  border-color: var(--base-border-color);
+  background: var(--base-toolbar-background);
+}
+
+.bases-search-row .search-input-container {
+  padding-inline: 0.55em;
+  border: 1px solid var(--base-border-color);
+  border-radius: 0.48em;
+  background: var(--base-surface-alt);
+}
+
+.bases-search-row .search-input-container:focus-within {
+  border-color: var(--base-link-color);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--base-link-color) 18%, transparent);
+}
+
+:is(.bases-toolbar-menu, .bases-toolbar-menu-container, .bases-new-item-popover) {
+  --background-modifier-hover: var(--base-row-hover);
+  --background-modifier-border: var(--base-border-color);
+  color: var(--text-normal);
+  border-color: var(--base-border-color);
+  background-color: var(--base-toolbar-background);
+}
+
+.bases-toolbar-menu-item {
+  border-radius: 0.42em;
+}
+
+.bases-toolbar-menu-item:hover,
+.bases-toolbar-menu-item.is-selected {
+  color: var(--base-link-hover);
+  background: var(--base-row-hover);
+}
+
+.bases-toolbar-menu-container .search-input-container {
+  border-color: var(--base-border-color);
+}
+
+/* Table frame, header, rows, and cells. */
+.bases-view[data-view-type="table"] {
+  background: var(--base-surface);
+}
+
+.bases-table-container {
+  background: var(--base-surface) !important;
+}
+
+.bases-thead {
+  color: var(--h3-color);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--base-header-background) 86%, var(--base-surface)),
+    var(--base-header-background)
+  ) !important;
+  box-shadow: inset 0 -1px 0 var(--base-border-color) !important;
+}
+
+.bases-thead .bases-td {
+  color: var(--h3-color);
+  box-shadow: inset -1px 0 0 var(--base-border-color) !important;
+}
+
+.bases-table-header-label,
+.bases-table-header-name {
+  color: var(--h3-color);
+  font-weight: 700;
+}
+
+.bases-tbody {
+  background: var(--base-surface) !important;
+  box-shadow: none !important;
+}
+
+.bases-tbody .bases-tr {
+  background: var(--base-surface);
+  box-shadow: inset 0 -1px 0 var(--base-border-color) !important;
+  transition: background-color 140ms ease;
+}
+
+.bases-tbody .bases-tr:nth-child(even) {
+  background: var(--base-surface-alt);
+}
+
+.bases-tbody .bases-tr:hover {
+  background: var(--base-row-hover) !important;
+}
+
+.bases-tbody .bases-td,
+.bases-table-footer .bases-td {
+  box-shadow: inset -1px 0 0 var(--base-border-color) !important;
+}
+
+.bases-td:focus-within {
+  color: var(--text-normal);
+  background: var(--base-active-cell) !important;
+}
+
+.bases-table-container:focus .bases-table-active-cell,
+.bases-table-container:focus .bases-table-selection {
+  border-radius: 0.36em;
+}
+
+.bases-table-footer {
+  border-top: 1px solid var(--base-border-color);
+  background: var(--base-toolbar-background) !important;
+}
+
+/* Base links should use the same calm blue family, not Obsidian purple. */
+.bases-view :is(a, a.internal-link, .metadata-link),
+.bases-rendered-value :is(a, a.internal-link, .metadata-link) {
+  color: var(--base-link-color) !important;
+  font-weight: 520;
+  text-decoration: none !important;
+  text-underline-offset: 0.16em;
+  transition: color 140ms ease, text-decoration-color 140ms ease;
+}
+
+.bases-view :is(a, a.internal-link, .metadata-link):hover,
+.bases-rendered-value :is(a, a.internal-link, .metadata-link):hover {
+  color: var(--base-link-hover) !important;
+  text-decoration: underline !important;
+  text-decoration-color: color-mix(in srgb, var(--base-link-hover) 52%, transparent) !important;
+}
+
+.bases-rendered-value {
+  color: var(--text-normal);
+  line-height: 1.45;
+  unicode-bidi: plaintext;
+}
+
+.bases-view .multi-select-pill {
+  color: var(--base-link-hover);
+  border: 1px solid color-mix(in srgb, var(--base-border-color) 78%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--base-header-background) 58%, transparent);
+}
+
+.bases-view input[type="checkbox"] {
+  accent-color: var(--task-checkbox-fill);
+}
+
+/* Cards view. */
+.bases-cards-container {
+  padding: 0.25em;
+  background: transparent;
+}
+
+.bases-cards-item {
+  border: 1px solid var(--base-border-color);
+  background: linear-gradient(145deg, var(--base-surface-alt), var(--base-surface));
+}
+
+.bases-cards-item:hover {
+  transform: translateY(-1px);
+}
+
+.bases-cards-cover {
+  border-bottom: 1px solid var(--base-border-color);
+}
+
+.bases-cards-label {
+  color: var(--base-muted-color);
+}
+
+/* List view. */
+.bases-list-item {
+  border-radius: 0.46em;
+  transition: background-color 140ms ease;
+}
+
+.bases-list-item:hover {
+  background: var(--base-row-hover);
+}
+
+.bases-list-item .list-bullet,
+.bases-list-item .list-number,
+.bases-list-separator {
+  color: var(--list-marker-color) !important;
+}
+
+.bases-group-heading {
+  color: var(--h3-color);
+  border-bottom: 1px solid color-mix(in srgb, var(--base-border-color) 70%, transparent);
+}
+
+/* Blue quotes for > — direction-aware in Reading and Live Preview. */
+:is(.markdown-rendered, .markdown-preview-view) blockquote {
+  margin-block: 1em;
+  margin-inline: 0;
+  padding: 0.68em 1em;
+  border: 0 !important;
+  border-inline-start: 0.22em solid var(--quote-border-color) !important;
+  border-radius: 0.5em;
+  color: var(--text-normal);
+  background-color: transparent !important;
+  background-image: linear-gradient(
+    to right,
+    var(--quote-background-start),
+    color-mix(in srgb, var(--quote-background-start) 42%, transparent) 58%,
+    transparent 100%
+  );
+  box-shadow: 0 0.16em 0.52em var(--quote-shadow);
+}
+
+:is(.markdown-rendered, .markdown-preview-view) blockquote:dir(rtl) {
+  background-image: linear-gradient(
+    to left,
+    var(--quote-background-start),
+    color-mix(in srgb, var(--quote-background-start) 42%, transparent) 58%,
+    transparent 100%
+  );
+}
+
+:is(.markdown-rendered, .markdown-preview-view) blockquote > :first-child {
+  margin-block-start: 0;
+}
+
+:is(.markdown-rendered, .markdown-preview-view) blockquote > :last-child {
+  margin-block-end: 0;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-quote {
+  padding-block: 0.22em;
+  border-radius: 0;
+  color: var(--text-normal);
+  background-color: transparent !important;
+  background-image: linear-gradient(
+    to right,
+    var(--quote-background-start),
+    color-mix(in srgb, var(--quote-background-start) 42%, transparent) 58%,
+    transparent 100%
+  );
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-quote:dir(rtl) {
+  background-image: linear-gradient(
+    to left,
+    var(--quote-background-start),
+    color-mix(in srgb, var(--quote-background-start) 42%, transparent) 58%,
+    transparent 100%
+  );
+}
+
+/* Replace Obsidian's purple quote rule with a softly rounded blue bar. */
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-quote::before {
+  width: 0.22em !important;
+  border: 0 !important;
+  border-radius: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--quote-bar-highlight),
+    var(--quote-border-color)
+  );
+}
+
+/* Join consecutive editor rows into one quote card, like Reading mode. */
+.markdown-source-view.mod-cm6.is-live-preview
+  :is(.cm-line.HyperMD-quote:first-child, .cm-line:not(.HyperMD-quote) + .cm-line.HyperMD-quote) {
+  border-start-start-radius: 0.5em;
+  border-start-end-radius: 0.5em;
+  box-shadow: 0 -0.18em 0.5em -0.18em var(--quote-shadow);
+}
+
+.markdown-source-view.mod-cm6.is-live-preview
+  :is(.cm-line.HyperMD-quote:first-child, .cm-line:not(.HyperMD-quote) + .cm-line.HyperMD-quote)::before {
+  border-start-start-radius: 999px;
+  border-start-end-radius: 999px;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview
+  .cm-line.HyperMD-quote:not(:has(+ .cm-line.HyperMD-quote)) {
+  border-end-start-radius: 0.5em;
+  border-end-end-radius: 0.5em;
+  box-shadow: 0 0.18em 0.5em -0.18em var(--quote-shadow);
+}
+
+.markdown-source-view.mod-cm6.is-live-preview
+  .cm-line.HyperMD-quote:not(:has(+ .cm-line.HyperMD-quote))::before {
+  border-end-start-radius: 999px;
+  border-end-end-radius: 999px;
+}
+
+/* The blue bar already represents >, so keep its active editing glyph invisible. */
+.markdown-source-view.mod-cm6.is-live-preview
+  .cm-line.HyperMD-quote .cm-formatting-quote {
+  color: transparent !important;
+}
+
+/* Inline code: compact, readable, and consistent in Reading and Live Preview. */
+:is(.markdown-rendered, .markdown-preview-view) :not(pre) > code,
+.markdown-source-view.mod-cm6 .cm-inline-code {
+  color: var(--code-text-color) !important;
+  font-family: var(--font-monospace) !important;
+  font-size: 0.88em;
+  font-weight: 500;
+  line-height: inherit;
+  background: var(--code-inline-background) !important;
+  box-shadow: inset 0 -0.07em 0 var(--code-border-color);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+:is(.markdown-rendered, .markdown-preview-view) :not(pre) > code {
+  padding: 0.12em 0.38em;
+  border: 1px solid color-mix(in srgb, var(--code-border-color) 72%, transparent);
+  border-radius: 0.34em;
+}
+
+/* Reading mode code blocks. */
+:is(.markdown-rendered, .markdown-preview-view) pre {
+  position: relative;
+  margin-block: 1em;
+  padding: 0.9em 1.1em !important;
+  border: 1px solid var(--code-border-color);
+  border-inline-start: 0.22em solid var(--code-accent-color);
+  border-radius: 0.58em;
+  direction: ltr;
+  text-align: left;
+  background: var(--code-block-background) !important;
+  box-shadow: 0 0.2em 0.65em var(--code-shadow);
+  overflow: auto;
+}
+
+:is(.markdown-rendered, .markdown-preview-view) pre > code {
+  display: block;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0;
+  color: var(--code-text-color) !important;
+  font-family: var(--font-monospace) !important;
+  font-size: 0.88em;
+  line-height: 1.65;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Live Preview code blocks use one editor line per visual row. */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  padding-inline: 1.1em !important;
+  border-inline-start: 0.22em solid var(--code-accent-color);
+  border-inline-end: 1px solid var(--code-border-color);
+  color: var(--code-text-color);
+  font-family: var(--font-monospace) !important;
+  font-size: 0.88em;
+  line-height: 1.65;
+  direction: ltr;
+  text-align: left;
+  background: var(--code-block-background) !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin {
+  padding-top: 0.75em !important;
+  border-block-start: 1px solid var(--code-border-color);
+  border-start-start-radius: 0.58em;
+  border-start-end-radius: 0.58em;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end {
+  padding-bottom: 0.75em !important;
+  border-block-end: 1px solid var(--code-border-color);
+  border-end-start-radius: 0.58em;
+  border-end-end-radius: 0.58em;
+  box-shadow: 0 0.2em 0.65em var(--code-shadow);
+}
+
+/* Keep the fence markers/language label present but visually quiet while editing. */
+.markdown-source-view.mod-cm6 :is(.cm-formatting-code-block, .code-block-flair) {
+  color: var(--code-muted-color) !important;
+}
+
+/* Match Obsidian's copy button to the same rounded blue system. */
+:is(.markdown-rendered, .markdown-preview-view) .copy-code-button {
+  width: auto;
+  height: auto;
+  padding: 0.28em;
+  color: var(--code-muted-color);
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 0.62;
+  transition: color 140ms ease, opacity 140ms ease, transform 140ms ease;
+}
+
+:is(.markdown-rendered, .markdown-preview-view) .copy-code-button:hover {
+  color: var(--code-accent-color);
+  background: transparent !important;
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+/* Blue tables matching the heading and task-list style. */
+:is(.markdown-rendered, .markdown-preview-view, .markdown-source-view.mod-cm6) table {
+  width: 100% !important;
+  max-width: 100% !important;
+  table-layout: fixed;
+  margin-block: 1em;
+  border: 1px solid var(--table-border-color) !important;
+  border-radius: 0.55em;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  overflow: hidden;
+  background: var(--table-background);
+  box-shadow: 0 0.22em 0.7em var(--table-shadow);
+}
+
+:is(.markdown-rendered, .markdown-preview-view, .markdown-source-view.mod-cm6) table :is(th, td) {
+  padding: 0.55em 0.8em !important;
+  border: 0 !important;
+  border-inline-end: 1px solid var(--table-border-color) !important;
+  border-block-end: 1px solid var(--table-border-color) !important;
+  text-align: start;
+  vertical-align: middle;
+  line-height: 1.55;
+}
+
+:is(.markdown-rendered, .markdown-preview-view, .markdown-source-view.mod-cm6) table th {
+  color: var(--table-header-text);
+  font-weight: 700;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--table-header-background) 82%, var(--table-background)),
+    var(--table-header-background)
+  );
+}
+
+:is(.markdown-rendered, .markdown-preview-view, .markdown-source-view.mod-cm6) table tr > :last-child {
+  border-inline-end: 0 !important;
+}
+
+:is(.markdown-rendered, .markdown-preview-view, .markdown-source-view.mod-cm6) table tbody tr:last-child > td {
+  border-block-end: 0 !important;
+}
+
+:is(.markdown-rendered, .markdown-preview-view, .markdown-source-view.mod-cm6) table tbody tr:nth-child(even) > td {
+  background: var(--table-row-alt);
+}
+
+:is(.markdown-rendered, .markdown-preview-view, .markdown-source-view.mod-cm6) table tbody tr > td {
+  transition: background-color 140ms ease;
+}
+
+:is(.markdown-rendered, .markdown-preview-view, .markdown-source-view.mod-cm6) table tbody tr:hover > td {
+  background: var(--table-row-hover);
+}
+
+/* Obsidian wraps editable tables; make those wrappers fill the editor too. */
+.markdown-source-view.mod-cm6 :is(.cm-table-widget, .cm-embed-block, .markdown-rendered):has(table) {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget {
+  --table-line-height: 1.55;
+  --table-white-space: normal;
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget .table-wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Avoid the editor's extra inner padding so row heights match Reading mode. */
+.markdown-source-view.mod-cm6 .cm-table-widget .table-cell-wrapper {
+  height: 100%;
+  padding: 0 !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget .cm-content,
+.markdown-source-view.mod-cm6 .cm-table-widget .cm-content.cm-lineWrapping {
+  width: 100% !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+  overflow-wrap: break-word;
+}
+
+/* Muted dark-blue markers for unordered (-) lists. */
+:is(.markdown-rendered, .markdown-preview-view) ul > li::marker,
+.markdown-source-view.mod-cm6 .cm-formatting-list.cm-formatting-list-ul,
+.markdown-source-view.mod-cm6 .list-bullet::after {
+  color: var(--list-marker-color) !important;
+}
+
+/* Rounded blue task checkboxes for - [ ] and - [x]. */
+:is(.markdown-rendered, .markdown-preview-view) input.task-list-item-checkbox,
+:is(.markdown-rendered, .markdown-preview-view) .task-list-item > input[type="checkbox"],
+.markdown-source-view.mod-cm6.is-live-preview input.task-list-item-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: inherit;
+  box-sizing: border-box;
+  width: 0.78em;
+  height: 0.78em;
+  border: 0.07em solid var(--task-checkbox-border);
+  border-radius: 0.25em;
+  background-color: color-mix(in srgb, var(--task-checkbox-fill) 14%, transparent);
+  box-shadow: 0 0 0 0.035em color-mix(in srgb, var(--task-checkbox-fill) 12%, transparent);
+  cursor: pointer;
+  transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+/* Reading mode and Live Preview use different line-box metrics. */
+:is(.markdown-rendered, .markdown-preview-view) input.task-list-item-checkbox,
+:is(.markdown-rendered, .markdown-preview-view) .task-list-item > input[type="checkbox"] {
+  position: relative;
+  top: 0 !important;
+  vertical-align: baseline !important;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview input.task-list-item-checkbox {
+  top: 0 !important;
+  vertical-align: -0.18em !important;
+}
+
+:is(.markdown-rendered, .markdown-preview-view) input.task-list-item-checkbox:checked,
+:is(.markdown-rendered, .markdown-preview-view) .task-list-item > input[type="checkbox"]:checked,
+.markdown-source-view.mod-cm6.is-live-preview input.task-list-item-checkbox:checked {
+  border-color: var(--task-checkbox-fill);
+  background-color: var(--task-checkbox-fill);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5 9.5 17 19 7.5' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  box-shadow: 0 0.06em 0.2em color-mix(in srgb, var(--task-checkbox-fill) 35%, transparent);
+}
+
+/* Remove Obsidian's built-in check so only the rounded SVG check remains. */
+:is(.markdown-rendered, .markdown-preview-view) input.task-list-item-checkbox:checked::before,
+:is(.markdown-rendered, .markdown-preview-view) input.task-list-item-checkbox:checked::after,
+:is(.markdown-rendered, .markdown-preview-view) .task-list-item > input[type="checkbox"]:checked::before,
+:is(.markdown-rendered, .markdown-preview-view) .task-list-item > input[type="checkbox"]:checked::after,
+.markdown-source-view.mod-cm6.is-live-preview input.task-list-item-checkbox:checked::before,
+.markdown-source-view.mod-cm6.is-live-preview input.task-list-item-checkbox:checked::after {
+  content: none !important;
+  display: none !important;
+}
+
+:is(.markdown-rendered, .markdown-preview-view) input.task-list-item-checkbox:focus-visible,
+:is(.markdown-rendered, .markdown-preview-view) .task-list-item > input[type="checkbox"]:focus-visible,
+.markdown-source-view.mod-cm6.is-live-preview input.task-list-item-checkbox:focus-visible {
+  outline: 2px solid var(--task-checkbox-fill);
+  outline-offset: 2px;
+}
+
+/* Keep the underline exactly as wide as its H1 text. */
+:is(.markdown-rendered, .markdown-preview-view) h1,
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-header-1 {
+  position: relative;
+  display: table;
+  max-width: 100%;
+  padding-bottom: 0.55rem;
+  margin-inline-end: auto;
+}
+
+/* Place Arabic H1s at the right edge while preserving their text-width line. */
+:is(.markdown-rendered, .markdown-preview-view) h1:dir(rtl),
+.markdown-source-view.mod-cm6.is-live-preview:dir(rtl) .cm-line.HyperMD-header-1,
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-header-1:dir(rtl) {
+  direction: rtl;
+  text-align: right;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+/* H1 underline: blue at the text start, fading into the page. */
+:is(.markdown-rendered, .markdown-preview-view) h1::after,
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-header-1::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  width: calc(100% + 3ch);
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--h1-color) 0%,
+    var(--h1-color) 35%,
+    transparent 100%
+  );
+}
+
+/* Arabic / RTL: start the blue from the right instead. */
+:is(.markdown-rendered, .markdown-preview-view) h1:dir(rtl)::after,
+.markdown-source-view.mod-cm6.is-live-preview:dir(rtl) .cm-line.HyperMD-header-1::after,
+.markdown-source-view.mod-cm6.is-live-preview .cm-line.HyperMD-header-1:dir(rtl)::after {
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+  left: auto !important;
+  right: 0 !important;
+  background: linear-gradient(
+    to left,
+    var(--h1-color) 0%,
+    var(--h1-color) 35%,
+    transparent 100%
+  );
+}
